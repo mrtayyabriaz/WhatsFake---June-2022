@@ -1,0 +1,159 @@
+body {
+  box-sizing: border-box;
+  align-items: center;
+  margin: 0px;
+  padding: 0px;
+}
+
+nev {
+  box-sizing: border-box;
+
+  height: 60px;
+  display: flex;
+  width: 100%;
+  background-color: #ffffff;
+  padding-left: 10%;
+}
+
+.name {
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 28px;
+  color: rgb(72, 255, 0);
+}
+nev div a {
+  border: dotted 2px rgb(28, 175, 60);
+  padding: 5px;
+  color: #009277;
+}
+nev div a:hover {
+  color: white;
+  background-color: #008069;
+  border: dotted 2px rgb(28, 175, 60);
+  box-shadow: 0px 0px 30px #008069;
+  border-radius: 5px;
+}
+.namediv {
+  padding-left: 10px;
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  width: 31%;
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+}
+
+.nevbtn {
+  padding: 10px 20px;
+  margin: 7px;
+  display: inline-block;
+  position: relative;
+  margin-top: 8px;
+
+  overflow: hidden;
+
+  text-decoration: none;
+  color: #008069;
+  border: 2px solid #008069;
+  border-radius: 6px;
+}
+
+.nevbtn:hover {
+  color: white;
+  background-color: #008069;
+  box-shadow: 0px 0px 30px #008069;
+  border-radius: 5px;
+}
+
+.option {
+  border-radius: 5px;
+}
+
+.logoimg {
+  height: 100%;
+  width: 100%;
+}
+
+.extradiv {
+  width: 0%;
+}
+
+.con {
+  display: none;
+  cursor: pointer;
+  color: white;
+  z-index: 999;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: rgb(255, 255, 255);
+  margin: 6px 0;
+  transition: 0.4s;
+}
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cont {
+  background-color: #00675c;
+}
+.text {
+  width: 60%;
+  color: white;
+  margin: 4%;
+  font-size: xx-large;
+}
+.fake1 {
+  width: 34vh;
+  /* height: 70%; */
+  margin: 10%;
+  float: right;
+}
+.generate {
+  padding-left: 40%;
+  background-color: rgb(185, 185, 185);
+}
+
+@media screen and (max-width: 540px) {
+  .text {
+    font-size: large;
+  }
+  .fake1 {
+    width: 19vh;
+    /* height: 55vh; */
+  }
+  .nevbtn {
+    margin: 10px 5px;
+    padding: 5px 10px;
+  }
+  .namediv {
+    font-size: medium;
+  }
+  nev {
+    padding-left: 0px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .text {
+    font-size: small;
+  }
+  .nevbtn {
+    margin: 10px 5px;
+    padding: 3px 5px;
+  }
+  .namediv {
+    font-size: x-small;
+  }
+  .fake1 {
+    width: 15vh;
+  }
+}

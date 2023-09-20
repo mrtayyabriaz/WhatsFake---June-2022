@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>extra</title>
+
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="whatsfake.css" />
+    <link rel="stylesheet" type="text/css" href="cheak box.css">
+</head>
+
+<body style="background-color: #d4ecc8;">
+    <div> <a href="index.html" id="setdata" class="button">Save Data</a>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <style>
+        #setgmessage14 {
+            width: 300px;
+            line-height: 20px;
+        }
+    </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- input message time  number 14 -->
+    <!-- input message  -->
+    <div id="message14">
+        <div class="input_message">
+            <div>
+                <!-- Message Date -->
+                <div class="datatext" style="margin-top: 50px;"><label for="setdate14">Add Message Date</label></div>
+                <div style="display: flex;flex-direction: column;align-items: center;">
+                    <input type="text" name="name14" class="input" value="14 May 2021" id="setdate14" />
+                    <button class="add_date button" onclick=adddate14()>Add Date</button><abbr class="abrr"
+                        title="please add dates in message order for best output"> ?</abbr>
+                </div>
+            </div>
+            <div class="messagepadding">
+                <div class="heading">Enter Message</div>
+                <!-- white green switch checkk box -->
+                <label class="label">
+                    <input type="checkbox" class="chkbox" id="gwchkbox14" onclick=check_box_function14()>
+                    <span class="chkspan">
+                        <li class="face">
+                            <div class="eye">&nbsp;</div>
+                            <div class="eye2"> &nbsp;</div>
+                            <i class="mouth">&nbsp;</i>
+                        </li>
+                    </span>
+                </label>
+                <!-- check box button end  -->
+                <div>
+
+                    <div class="datatext" id="greentext14"><label for="setgmessage"> Green message</label></div>
+                    <div class="datatext" id="whitetext14"><label for="setwmessage">White message</label></div>
+                    <textarea type=" text" value="this is message 14" name="greenmessage" rows="6" id="setgmessage14"
+                        placeholder="Green Bubble Message">This is White mssage this is green message this is whtite message ok this is green message ok this is white message</textarea><br><br>
+                    <textarea type="text" name="whitemessage" rows="5" id="setwmessage14"
+                        placeholder="White Bubble Message"></textarea>
+                    <br><br>
+                </div>
+
+
+                <!-- Green message time input -->
+                <div class="mtime" id="greentime14">
+                    <div class="datatext"><label for="setgmessagetime">Message time</label></div>
+                    <input type="time" name="messagetime14" id="setgmessagetime14" class="input"
+                        onchange=gtime14(this.value)><br><br><br>
+                </div>
+                <!-- white message time input 14-->
+                <div class="mtime" id="whitetime14">
+                    <div class="datatext"><label for="setwmessagetime">Message time</label></div>
+                    <input type="time" name="messagetime14" id="setwmessagetime14" class="input"
+                        onchange=gtime14(this.value)><br><br><br>
+                </div>
+
+                <!-- tick option  14-->
+                <div class="tickdiv" id="radiodiv14">
+                    <h3 onclick="radiobutton" id="test14">Ticks: </h3>
+                    <input type="radio" name="tick14" class="radio" id="sradio14" value="single14">
+                    <label for="sradio14" class="radiodata">Single</label>
+                    <input type="radio" name="tick14" class="radio" id="dradio14" value="double14">
+                    <label for="dradio14" class="radiodata">Double</label>
+                    <input type="radio" name="tick14" class="radio" id="bradio14" value="blue14">
+                    <label for="bradio14" class="radiodata">Blue</label>
+                </div>
+                <!-- add green message button  14-->
+                <div class=" flex_center add_message_button" id="add_green_message_button14">
+                    <div onclick=add_green_message14() class="button">Add Message</div>
+                </div><span id="lines">1</span>
+
+                <button onclick=calculateHeight()>check</button>
+                <!-- add white message button  -->
+                <!-- <div class=" flex_center add_message_button" id="add_white_message_button">
+            <div onclick=add_white_message() class="button">Add Message</div>
+          </div> -->
+            </div>
+        </div>
+    </div>
+    <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- output | output | output | output | output | output | output | output | output | -->
+    <div class="screenshot flex_center">
+        <div class="main" id="screenshot">
+            <!-- top section -->
+            <div class="namesection">
+                <!-- arrow -->
+                <div class="backarrow">➜</div>
+                <!-- profile picture -->
+                <img src="images/profile.jpg" alt="profile" class="profilepic" width="33px" height="35px" />
+                <!-- name -->
+                <div class="namediv">
+                    <div class="name" id="name">Dear John</div>
+                    <div class="lastseen" id="online">
+                        <!--last seen today at--> 12:49 AM
+                    </div>
+                </div>
+                <!-- video call icon -->
+                <div>
+                    <img src="images/video.png" class="videocall" alt="video icon" width="40px" height="40px" />
+                    <!-- audio call icon -->
+                    <img src="images/audio.png" class="audiocall" alt="audio icon" />
+                </div>
+                <!-- dots -->
+                <div class="dots">&#10247;</div>
+            </div>
+            <!-- main chat section-->
+            <div class="chatsection">
+                <img src="images/walpaper.jpg" alt="wappaper" class="walpaper" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <!-- the message number 14 -->
+                <div class="themessage14">
+
+                    <div class="datee_div" id="datediv14">
+                        <div class="datebox" id="date14">14 May 2021</div>
+                    </div>
+                    <!-- messages section | messages section | messages section | -->
+                    <!--green bubele -->
+                    <div class="gmessage_box" id="greenmessagediv14">
+                        <div class="bubblediv">
+                            <div id="gmessage14">This is 14nd Message</div>
+                            <!-- gnoke -->
+                            <div class="gnoke"></div>
+                            <div class="timediv gmessage_time">
+                                <div id="gmessagetime14">2:00 AM</div>
+                                <img src="images/singletick.png" id="singletick14" class="message_tick"></img>
+                                <img src="images/doubletick.png" id="doubletick14" class="message_tick"></img>
+                                <img src="images/seentick.png" id="bluetick14" class="message_tick"></img>
+                            </div>
+                        </div>
+                    </div>
+                    <!--white bubble -->
+                    <div class="wmessage_box" id="whitemessagediv14">
+                        <div class="bubblediv">
+                            <div id="wmessage14">This is 14nd Message</div>
+                            <!-- wnoke  -->
+                            <div class="wnoke"> &nbsp;</div>
+                            <div class="timediv">
+                                <sub class="wmessage_time" id="wmessagetime14">1:50 AM</sub>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+                <script src="extra.js"> </script>
+                <script>
+                    var ta = document.getElementById("setgmessage14");
+                    var calculateContentHeight = function (ta, scanAmount) {
+                        var origHeight = ta.style.height,
+                            height = ta.offsetHeight,
+                            scrollHeight = ta.scrollHeight,
+                            overflow = ta.style.overflow;
+                        if (height >= scrollHeight) {
+                            ta.style.height = (height + scanAmount) + 'px';
+                            ta.style.overflow = 'hidden';
+                            if (scrollHeight < ta.scrollHeight) {
+                                while (ta.offsetHeight >= ta.scrollHeight) {
+                                    ta.style.height = (height -= scanAmount) + 'px';
+                                }
+                                while (ta.offsetHeight < ta.scrollHeight) {
+                                    ta.style.height = (height++) + 'px';
+                                }
+                                ta.style.height = origHeight;
+                                ta.style.overflow = overflow;
+                                return height;
+                            }
+                        } else {
+                            return scrollHeight;
+                        }
+                    }
+                    var calculateHeight = function () {
+                        var ta = document.getElementById("setgmessage14"),
+                            style = (window.getComputedStyle) ?
+                                window.getComputedStyle(ta) : ta.currentStyle,
+                            taLineHeight = parseInt(style.lineHeight, 10),
+                            taHeight = calculateContentHeight(ta, taLineHeight),
+                            numberOfLines = Math.ceil(taHeight / taLineHeight);
+
+                        document.getElementById("lines").innerHTML = "there are " +
+                            numberOfLines + " lines in the text area";
+                    };
+
+
+
+
+                    // commented with comments
+                    // var ta = document.getElementById("setgmessage14");
+                    // var calculateContentHeight = function (ta, scanAmount) {
+                    //     var origHeight = ta.style.height,
+                    //         height = ta.offsetHeight,
+                    //         scrollHeight = ta.scrollHeight,
+                    //         overflow = ta.style.overflow;
+                    //     /// only bother if the ta is bigger than content
+                    //     if (height >= scrollHeight) {
+                    //         /// check that our browser supports changing dimension
+                    //         /// calculations mid-way through a function call...
+                    //         ta.style.height = (height + scanAmount) + 'px';
+                    //         /// because the scrollbar can cause calculation problems
+                    //         ta.style.overflow = 'hidden';
+                    //         /// by checking that scrollHeight has updated
+                    //         if (scrollHeight < ta.scrollHeight) {
+                    //             /// now try and scan the ta's height downwards
+                    //             /// until scrollHeight becomes larger than height
+                    //             while (ta.offsetHeight >= ta.scrollHeight) {
+                    //                 ta.style.height = (height -= scanAmount) + 'px';
+                    //             }
+                    //             /// be more specific to get the exact height
+                    //             while (ta.offsetHeight < ta.scrollHeight) {
+                    //                 ta.style.height = (height++) + 'px';
+                    //             }
+                    //             /// reset the ta back to it's original height
+                    //             ta.style.height = origHeight;
+                    //             /// put the overflow back
+                    //             ta.style.overflow = overflow;
+                    //             return height;
+                    //         }
+                    //     } else {
+                    //         return scrollHeight;
+                    //     }
+                    // }
+                    // var calculateHeight = function () {
+                    //     var ta = document.getElementById("setgmessage14"),
+                    //         style = (window.getComputedStyle) ?
+                    //             window.getComputedStyle(ta) : ta.currentStyle,
+
+                    //         // This will get the line-height only if it is set in the css,
+                    //         // otherwise it's "normal"
+                    //         taLineHeight = parseInt(style.lineHeight, 10),
+                    //         // Get the scroll height of the textarea
+                    //         taHeight = calculateContentHeight(ta, taLineHeight),
+                    //         // calculate the number of lines
+                    //         numberOfLines = Math.ceil(taHeight / taLineHeight);
+
+                    //     document.getElementById("lines").innerHTML = "there are " +
+                    //         numberOfLines + " lines in the text area";
+                    // };
+
+
+                </script>
+
+</body>
+
+</html>

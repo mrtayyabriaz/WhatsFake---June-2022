@@ -1,0 +1,2070 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create - Whatsfake</title>
+  <link rel="stylesheet" href="style/whatsfake.css" />
+  <link rel="stylesheet" type="text/css" href="style/cheak box.css">
+  <!-- font awsem  -->
+  <link rel="stylesheet" href="style/awesomefonts.css">
+  <!-- <link rel="stylesheet" href="css/font-awesome.min.css"> -->
+  <script src="https://kit.fontawesome.com/681a158138.js" crossorigin="anonymous"></script>
+  <!-- pro awsm fonts  -->
+  <!-- <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.1.1/css/all.css"> -->
+  <!-- style/awesomefonts.css -->
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> -->
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Ms+Madi&family=Roboto&display=swap" rel="stylesheet" /> -->
+  <!-- favicon -->
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+
+
+
+<!-- ================================ | Body Tag |===============================  -->
+
+<body>
+  <!-- <div> -->
+  <h1 class="topbar" id="topbar">Welcome to whatsfake</h1>
+  <div class="inputdata">
+    <div class="container">
+
+      <div style="display: flex;flex-direction: column;align-items: flex-start;">
+        <!-- <div class="heading">Detail</div> -->
+        <div class="datatext"><label for="setname"> Name</label></div>
+        <input type="text" name="name" class="input" id="setname" placeholder="name" value="Dear John" />
+
+        <!-- input profile pic  -->
+        <form method="POST" action="/" enctype="multipart/form-data">
+          <div class="datatext">Upload Profile Pic: </div>
+          <input type="file" id="profileinput" accept="image/*" onchange=profilepic() class="btn btn-color">
+        </form>
+
+
+        <!-- online  -->
+        <div class="datatext"><label for="setonline">Online Time</label>
+          <span style="font-size: small"></span>
+        </div>
+        <input type="text" name="name" class="input" value="last seen at 10:23 PM , online" id="setonline" />
+        <!-- Footer  -->
+        <div class="datatext"><label for="setfmessage">Footer message</label></div>
+        <input type=" text" name="name" class="input" id="setfmessage" value="Message" /><br><br>
+        <!-- save data button  -->
+        <div class=" flex_center">
+          <!-- <a href="extra.html" id="setdata" class="button">Save Data</a> -->
+          <div id="setdata" onclick=setdata() class="btn">Save Data</div>
+        </div><br>
+      </div>
+      <div class="them">
+        <div class="datatext">Change color </div>
+        <input type="color" style="width: 273px; height: 36px;" value="rgb(250,150,150)" name="color" id="colorinput"
+          onchange=color(this.value)>
+        <button class="button input" style="margin-top: 10px;" id="defaultcolor" onclick=defaultcolor()>default</button>
+        <!-- upload walpaper  -->
+        <form method="POST" action="/" enctype="multipart/form-data">
+          <div class="datatext">Upload Walpaper </div>
+          <input type="file" style="width:243px;" id="walpaperinput" accept="image/*" onchange=walpaperchange()
+            class="btn btn-color">
+        </form>
+        <button class=" small_button input" style="margin-top: 10px;" onclick=defaultwalpaper()>Default
+          Walpaper</button>
+      </div>
+    </div>
+    <hr style=" width: 90%;">
+
+
+    <div style="display: flex;align-items: center;flex-direction: column;justify-content: flex-start;">
+      <h3>Add Next Message</h3>
+      <div class="message_radio_div">
+        The<div id="mr1"><input id="radio1" type="radio" name="mradio" value="mr1" class="messageradio" checked>
+          <label for="radio1">1st</label>
+        </div>
+        <div id="mr2"><input id="radio2" type="radio" name="mradio" value="mr2" class="messageradio"
+            onclick=findpos1()+setpos2()>
+          <label for="radio2">2nd</label>
+        </div>
+        <div id="mr3"><input id="radio3" type="radio" name="mradio" value="mr3" class="messageradio"
+            onclick=findpos2()+setpos3()+walpaper()>
+          <label for="radio3">3rd</label>
+        </div>
+        <div id="mr4"><input id="radio4" type="radio" name="mradio" value="mr4" class="messageradio"
+            onclick=findpos3()+setpos4()+walpaper()>
+          <label for="radio4">4th</label>
+        </div>
+        <div id="mr5"><input id="radio5" type="radio" name="mradio" value="mr5" class="messageradio"
+            onclick=findpos4()+setpos5()+walpaper()>
+          <label for="radio5">5th</label>
+        </div>
+        <div id="mr6"><input id="radio6" type="radio" name="mradio" value="mr6" class="messageradio"
+            onclick=findpos5()+setpos6()+walpaper()>
+          <label for="radio6">6th</label>
+        </div>
+        <div id="mr7"><input id="radio7" type="radio" name="mradio" value="mr7" class="messageradio"
+            onclick=findpos6()+setpos7()+walpaper()>
+          <label for="radio7">7th</label>
+        </div>
+        <div id="mr8"><input id="radio8" type="radio" name="mradio" value="mr8" class="messageradio"
+            onclick=findpos7()+setpos8()+walpaper()>
+          <label for="radio8">8th</label>
+        </div>
+        <div id="mr9"><input id="radio9" type="radio" name="mradio" value="mr9" class="messageradio"
+            onclick=findpos8()+setpos9()+walpaper()>
+          <label for="radio9">9th</label>
+        </div>
+        <div id="mr10"><input id="radio10" type="radio" name="mradio" value="mr10" class="messageradio"
+            onclick=findpos9()+setpos10()+walpaper()>
+          <label for="radio10">10th</label>
+        </div>
+        <div id="mr11"><input id="radio11" type="radio" name="mradio" value="mr11" class="messageradio"
+            onclick=findpos10()+setpos11()+walpaper()>
+          <label for="radio11">11th</label>
+        </div>
+        <div id="mr12"><input id="radio12" type="radio" name="mradio" value="mr12" class="messageradio"
+            onclick=findpos11()+setpos12()+walpaper()>
+          <label for="radio12">12th</label>
+        </div>
+        <div id="mr13"><input id="radio13" type="radio" name="mradio" value="mr13" class="messageradio"
+            onclick=findpos12()+setpos13()+walpaper()>
+          <label for="radio13">13th</label>
+        </div>
+        <div id="mr14"><input id="radio14" type="radio" name="mradio" value="mr14" class="messageradio"
+            onclick=findpos13()+setpos14()+walpaper()>
+          <label for="radio14">14th</label>
+        </div>
+      </div>
+    </div>
+
+
+    <hr style="width: 90%;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- input message time  number 1 -->
+    <!-- input message  -->
+    <div id="message1">
+      <div class="input_message" style="margin-top: 2.5%;">
+        <div>
+          <!-- Message Date -->
+          <div class="datatext" style="margin-top: 50px;"><label for="setdate">Add Date From This Message</label>
+          </div>
+          <div style="display: flex;flex-direction: column;align-items: center;">
+            <input type="text" name="name" class="input" value="June 20, 2022" id="setdate" />
+            <button class="add_date btn btn-color" onclick="adddate()">Add Date</button>
+            <abbr id="abbr" class="abrr"
+              title="Add Date From this messaage. -- NOTE:_ ( add date first then add message )" onclick=alertdate()>
+              ?</abbr>
+          </div>
+        </div>
+        <div class="messagepadding">
+          <div class="heading">Enter Message</div>
+          <!-- white green switch checkk box -->
+          <label class="label">
+            <input type="checkbox" class="chkbox" id="gwchkbox" onclick=check_box_function()>
+            <span class="chkspan">
+              <li class="face">
+                <div class="eye">&nbsp;</div>
+                <div class="eye2"> &nbsp;</div>
+                <i class="mouth">&nbsp;</i>
+              </li>
+            </span>
+          </label>
+          <!-- check box button end  -->
+          <div>
+
+            <div class="datatext" id="greentext"><label for="setgmessage"> Green message</label></div>
+            <div class="datatext" id="whitetext"><label for="setgmessage">White message</label></div>
+            <textarea type=" text" value="this is message 1" name="greenmessage" rows="5" id="setgmessage"
+              placeholder="Enter Message..."></textarea><br><br>
+            <!-- <textarea type="text" name="whitemessage" rows="5" id="setwmessage"
+                placeholder="White Bubble Message"></textarea> -->
+            <br><br>
+          </div>
+
+
+          <!-- Green message time input -->
+          <div class="mtime" id="greentime">
+            <div class="datatext"><label for="setgmessagetime">Message time</label></div>
+            <input type="time" name="messagetime" id="setgmessagetime" class="input"
+              onchange=gtime(this.value)><br><br><br>
+          </div>
+          <!-- white message time input -->
+          <div class="mtime" id="whitetime">
+            <div class="datatext"><label for="setwmessagetime">Message time</label></div>
+            <input type="time" name="messagetime" id="setwmessagetime" class="input"
+              onchange=gtime(this.value)><br><br><br>
+          </div>
+
+          <!-- tick option  -->
+          <div class="tickdiv" id="radiodiv">
+            <h3 onclick="radiobutton" id="test">Ticks: </h3>
+            <input type="radio" name="tick" class="radio" id="sradio" value="single">
+            <label for="sradio" class="radiodata">Single</label>
+            <input type="radio" name="tick" class="radio" id="dradio" value="double">
+            <label for="dradio" class="radiodata">Double</label>
+            <input type="radio" name="tick" class="radio" id="bradio" value="blue">
+            <label for="bradio" class="radiodata">Blue</label>
+          </div>
+          <!-- add green message button  -->
+          <div class=" flex_center add_message_button" id="add_green_message_button">
+            <div onclick=calculateHeight()+add_green_message()+walpaper() class="btn">Add Message</div>
+          </div>
+          <!-- add white message button  -->
+          <!-- <div class=" flex_center add_message_button" id="add_white_message_button">
+              <div onclick=add_white_message() class="button">Add Message</div>
+            </div> -->
+        </div>
+      </div>
+    </div>
+    <br>
+
+
+
+
+
+
+
+
+
+
+    <!-- input message time  number 2 -->
+    <!-- input message  -->
+    <div id="message2">
+      <div class="input_message">
+        <div>
+          <!-- Message Date -->
+          <div class="datatext" style="margin-top: 50px;"><label for="setdate2">Add Date From This Message</label>
+          </div>
+          <div style="display: flex;flex-direction: column;align-items: center;">
+            <input type="text" name="name2" class="input" value="June 20, 2022" id="setdate2" />
+            <button class="add_date btn btn-color" onclick=adddate2()>Add Date</button><abbr class="abrr"
+              title="Add Date From this messaage. -- NOTE:_ ( add date first then add message )"> ?</abbr>
+          </div>
+        </div>
+        <div class="messagepadding">
+          <div class="heading">Enter Message</div>
+          <!-- white green switch checkk box -->
+          <label class="label">
+            <input type="checkbox" class="chkbox" id="gwchkbox2" onclick=check_box_function2()>
+            <span class="chkspan">
+              <li class="face">
+                <div class="eye">&nbsp;</div>
+                <div class="eye2"> &nbsp;</div>
+                <i class="mouth">&nbsp;</i>
+              </li>
+            </span>
+          </label>
+          <!-- check box button end  -->
+          <div>
+
+            <div class="datatext" id="greentext2"><label for="setgmessage2"> Green message</label></div>
+            <div class="datatext" id="whitetext2"><label for="setgmessage2">White message</label></div>
+            <textarea type=" text" value="this is message 2" name="greenmessage" rows="5" id="setgmessage2"
+              placeholder="Enter Message..."></textarea><br><br>
+            <!-- <textarea type="text" name="whitemessage" rows="5" id="setwmessage2"
+                placeholder="White Bubble Message"></textarea> -->
+            <br><br>
+          </div>
+
+
+          <!-- Green message time input -->
+          <div class="mtime" id="greentime2">
+            <div class="datatext"><label for="setgmessagetime">Message time</label></div>
+            <input type="time" name="messagetime2" id="setgmessagetime2" class="input"
+              onchange=gtime2(this.value)><br><br><br>
+          </div>
+          <!-- white message time input 2-->
+          <div class="mtime" id="whitetime2">
+            <div class="datatext"><label for="setwmessagetime">Message time</label></div>
+            <input type="time" name="messagetime2" id="setwmessagetime2" class="input"
+              onchange=gtime2(this.value)><br><br><br>
+          </div>
+
+          <!-- tick option  2-->
+          <div class="tickdiv" id="radiodiv2">
+            <h3 onclick="radiobutton" id="test2">Ticks: </h3>
+            <input type="radio" name="tick2" class="radio" id="sradio2" value="single2">
+            <label for="sradio2" class="radiodata">Single</label>
+            <input type="radio" name="tick2" class="radio" id="dradio2" value="double2">
+            <label for="dradio2" class="radiodata">Double</label>
+            <input type="radio" name="tick2" class="radio" id="bradio2" value="blue2">
+            <label for="bradio2" class="radiodata">Blue</label>
+          </div>
+          <!-- add green message button  2-->
+          <div class=" flex_center add_message_button" id="add_green_message_button2">
+            <div onclick=calculateHeight2()+add_green_message2()+walpaper() class="button">Add Message</div>
+          </div>
+          <!-- add white message button  -->
+          <!-- <div class=" flex_center add_message_button" id="add_white_message_button">
+              <div onclick=add_white_message() class="button">Add Message</div>
+            </div> -->
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+    <!-- input message time  number 3 -->
+    <!-- input message  -->
+    <div id="message3">
+      <div class="input_message">
+        <div>
+          <!-- Message Date -->
+          <div class="datatext" style="margin-top: 50px;"><label for="setdate3">Add Date From This Message</label>
+          </div>
+          <div style="display: flex;flex-direction: column;align-items: center;">
+            <input type="text" name="name3" class="input" value="June 20, 2022" id="setdate3" />
+            <button class="add_date btn btn-color" onclick=adddate3()>Add Date</button><abbr class=" abrr"
+              title="Add Date From this messaage. -- NOTE:_ ( add date first then add message )"> ?</abbr>
+          </div>
+        </div>
+        <div class="messagepadding">
+          <div class="heading">Enter Message</div>
+          <!-- white green switch checkk box -->
+          <label class="label">
+            <input type="checkbox" class="chkbox" id="gwchkbox3" onclick=check_box_function3()>
+            <span class="chkspan">
+              <li class="face">
+                <div class="eye">&nbsp;</div>
+                <div class="eye2"> &nbsp;</div>
+                <i class="mouth">&nbsp;</i>
+              </li>
+            </span>
+          </label>
+          <!-- check box button end  -->
+          <div>
+
+            <div class="datatext" id="greentext3"><label for="setgmessage3"> Green message</label></div>
+            <div class="datatext" id="whitetext3"><label for="setgmessage3">White message</label></div>
+            <textarea type=" text" value="this is message 3" name="greenmessage" rows="5" id="setgmessage3"
+              placeholder="Enter Message..."></textarea><br><br>
+            <!-- <textarea type="text" name="whitemessage" rows="5" id="setwmessage3"
+                placeholder="White Bubble Message"></textarea> -->
+            <br><br>
+          </div>
+
+
+          <!-- Green message time input -->
+          <div class="mtime" id="greentime3">
+            <div class="datatext"><label for="setgmessagetime">Message time</label></div>
+            <input type="time" name="messagetime3" id="setgmessagetime3" class="input"
+              onchange=gtime3(this.value)><br><br><br>
+          </div>
+          <!-- white message time input 3-->
+          <div class="mtime" id="whitetime3">
+            <div class="datatext"><label for="setwmessagetime">Message time</label></div>
+            <input type="time" name="messagetime3" id="setwmessagetime3" class="input"
+              onchange=gtime3(this.value)><br><br><br>
+          </div>
+
+          <!-- tick option  3-->
+          <div class="tickdiv" id="radiodiv3">
+            <h3 onclick="radiobutton" id="test3">Ticks: </h3>
+            <input type="radio" name="tick3" class="radio" id="sradio3" value="single3">
+            <label for="sradio3" class="radiodata">Single</label>
+            <input type="radio" name="tick3" class="radio" id="dradio3" value="double3">
+            <label for="dradio3" class="radiodata">Double</label>
+            <input type="radio" name="tick3" class="radio" id="bradio3" value="blue3">
+            <label for="bradio3" class="radiodata">Blue</label>
+          </div>
+          <!-- add green message button  3-->
+          <div class=" flex_center add_message_button" id="add_green_message_button3">
+            <div onclick=calculateHeight3()+add_green_message3()+walpaper() class="button">Add Message</div>
+          </div>
+          <!-- add white message button  -->
+          <!-- <div class=" flex_center add_message_button" id="add_white_message_button">
+            <div onclick=add_white_message() class="button">Add Message</div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+    <!-- input message time  number 4 -->
+    <!-- input message  -->
+    <div id="message4">
+      <div class="input_message">
+        <div>
+          <!-- Message Date -->
+          <div class="datatext" style="margin-top: 50px;"><label for="setdate4">Add Date From This Message</label>
+          </div>
+          <div style="display: flex;flex-direction: column;align-items: center;">
+            <input type="text" name="name4" class="input" value="June 20, 2022" id="setdate4" />
+            <button class="add_date btn btn-color" onclick=adddate4()>Add Date</button><abbr class=" abrr"
+              title="Add Date From this messaage. -- NOTE:_ ( add date first then add message )"> ?</abbr>
+          </div>
+        </div>
+        <div class="messagepadding">
+          <div class="heading">Enter Message</div>
+          <!-- white green switch checkk box -->
+          <label class="label">
+            <input type="checkbox" class="chkbox" id="gwchkbox4" onclick=check_box_function4()>
+            <span class="chkspan">
+              <li class="face">
+                <div class="eye">&nbsp;</div>
+                <div class="eye2"> &nbsp;</div>
+                <i class="mouth">&nbsp;</i>
+              </li>
+            </span>
+          </label>
+          <!-- check box button end  -->
+          <div>
+
+            <div class="datatext" id="greentext4"><label for="setgmessage4"> Green message</label></div>
+            <div class="datatext" id="whitetext4"><label for="setgmessage4">White message</label></div>
+            <textarea type=" text" value="this is message 4" name="greenmessage" rows="5" id="setgmessage4"
+              placeholder="Enter Message..."></textarea><br><br>
+            <textarea type="text" name="whitemessage" rows="5" id="setwmessage4"
+              placeholder="White Bubble Message"></textarea>
+            <br><br>
+          </div>
+
+
+          <!-- Green message time input -->
+          <div class="mtime" id="greentime4">
+            <div class="datatext"><label for="setgmessagetime">Message time</label></div>
+            <input type="time" name="messagetime4" id="setgmessagetime4" class="input"
+              onchange=gtime4(this.value)><br><br><br>
+          </div>
+          <!-- white message time input 4-->
+          <div class="mtime" id="whitetime4">
+            <div class="datatext"><label for="setwmessagetime">Message time</label></div>
+            <input type="time" name="messagetime4" id="setwmessagetime4" class="input"
+              onchange=gtime4(this.value)><br><br><br>
+          </div>
+
+          <!-- tick option  4-->
+          <div class="tickdiv" id="radiodiv4">
+            <h3 onclick="radiobutton" id="test4">Ticks: </h3>
+            <input type="radio" name="tick4" class="radio" id="sradio4" value="single4">
+            <label for="sradio4" class="radiodata">Single</label>
+            <input type="radio" name="tick4" class="radio" id="dradio4" value="double4">
+            <label for="dradio4" class="radiodata">Double</label>
+            <input type="radio" name="tick4" class="radio" id="bradio4" value="blue4">
+            <label for="bradio4" class="radiodata">Blue</label>
+          </div>
+          <!-- add green message button  4-->
+          <div class=" flex_center add_message_button" id="add_green_message_button4">
+            <div onclick=calculateHeight4()+add_green_message4()+walpaper() class="button">Add Message</div>
+          </div>
+          <!-- add white message button  -->
+          <!-- <div class=" flex_center add_message_button" id="add_white_message_button">
+            <div onclick=add_white_message() class="button">Add Message</div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+    <!-- input message time  number 5 -->
+    <!-- input message  -->
+    <div id="message5">
+      <div class="input_message">
+        <div>
+          <!-- Message Date -->
+          <div class="datatext" style="margin-top: 50px;"><label for="setdate5">Add Date From This Message</label>
+          </div>
+          <div style="display: flex;flex-direction: column;align-items: center;">
+            <input type="text" name="name5" class="input" value="June 20, 2022" id="setdate5" />
+            <button class="add_date btn btn-color" onclick=adddate5()>Add Date</button><abbr class=" abrr"
+              title="Add Date From this messaage. -- NOTE:_ ( add date first then add message )"> ?</abbr>
+          </div>
+        </div>
+        <div class="messagepadding">
+          <div class="heading">Enter Message</div>
+          <!-- white green switch checkk box -->
+          <label class="label">
+            <input type="checkbox" class="chkbox" id="gwchkbox5" onclick=check_box_function5()>
+            <span class="chkspan">
+              <li class="face">
+                <div class="eye">&nbsp;</div>
+                <div class="eye2"> &nbsp;</div>
+                <i class="mouth">&nbsp;</i>
+              </li>
+            </span>
+          </label>
+          <!-- check box button end  -->
+          <div>
+
+            <div class="datatext" id="greentext5"><label for="setgmessage5"> Green message</label></div>
+            <div class="datatext" id="whitetext5"><label for="setgmessage5">White message</label></div>
+            <textarea type=" text" value="this is message 5" name="greenmessage" rows="5" id="setgmessage5"
+              placeholder="Enter Message..."></textarea><br><br>
+            <textarea type="text" name="whitemessage" rows="5" id="setwmessage5"
+              placeholder="White Bubble Message"></textarea>
+            <br><br>
+          </div>
+
+
+          <!-- Green message time input -->
+          <div class="mtime" id="greentime5">
+            <div class="datatext"><label for="setgmessagetime">Message time</label></div>
+            <input type="time" name="messagetime5" id="setgmessagetime5" class="input"
+              onchange=gtime5(this.value)><br><br><br>
+          </div>
+          <!-- white message time input 5-->
+          <div class="mtime" id="whitetime5">
+            <div class="datatext"><label for="setwmessagetime">Message time</label></div>
+            <input type="time" name="messagetime5" id="setwmessagetime5" class="input"
+              onchange=gtime5(this.value)><br><br><br>
+          </div>
+
+          <!-- tick option  5-->
+          <div class="tickdiv" id="radiodiv5">
+            <h3 onclick="radiobutton" id="test5">Ticks: </h3>
+            <input type="radio" name="tick5" class="radio" id="sradio5" value="single5">
+            <label for="sradio5" class="radiodata">Single</label>
+            <input type="radio" name="tick5" class="radio" id="dradio5" value="double5">
+            <label for="dradio5" class="radiodata">Double</label>
+            <input type="radio" name="tick5" class="radio" id="bradio5" value="blue5">
+            <label for="bradio5" class="radiodata">Blue</label>
+          </div>
+          <!-- add green message button  5-->
+          <div class=" flex_center add_message_button" id="add_green_message_button5">
+            <div onclick=calculateHeight5()+add_green_message5()+walpaper() class="button">Add Message</div>
+          </div>
+          <!-- add white message button  -->
+          <!-- <div class=" flex_center add_message_button" id="add_white_message_button">
+            <div onclick=add_white_message() class="button">Add Message</div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+    <!-- input message time  number 6 -->
+    <!-- input message  -->
+    <div id="message6">
+      <div class="input_message">
+        <div>
+          <!-- Message Date -->
+          <div class="datatext" style="margin-top: 50px;"><label for="setdate6">Add Date From This Message</label>
+          </div>
+          <div style="display: flex;flex-direction: column;align-items: center;">
+            <input type="text" name="name6" class="input" value="June 20, 2022" id="setdate6" />
+            <button class="add_date btn btn-color" onclick=adddate6()>Add Date</button><abbr class=" abrr"
+              title="Add Date From this messaage. -- NOTE:_ ( add date first then add message )"> ?</abbr>
+          </div>
+        </div>
+        <div class="messagepadding">
+          <div class="heading">Enter Message</div>
+          <!-- white green switch checkk box -->
+          <label class="label">
+            <input type="checkbox" class="chkbox" id="gwchkbox6" onclick=check_box_function6()>
+            <span class="chkspan">
+              <li class="face">
+                <div class="eye">&nbsp;</div>
+                <div class="eye2"> &nbsp;</div>
+                <i class="mouth">&nbsp;</i>
+              </li>
+            </span>
+          </label>
+          <!-- check box button end  -->
+          <div>
+
+            <div class="datatext" id="greentext6"><label for="setgmessage6"> Green message</label></div>
+            <div class="datatext" id="whitetext6"><label for="setgmessage6">White message</label></div>
+            <textarea type=" text" value="this is message 6" name="greenmessage" rows="6" id="setgmessage6"
+              placeholder="Enter Message..."></textarea><br><br>
+            <textarea type="text" name="whitemessage" rows="5" id="setwmessage6"
+              placeholder="White Bubble Message"></textarea>
+            <br><br>
+          </div>
+
+
+          <!-- Green message time input -->
+          <div class="mtime" id="greentime6">
+            <div class="datatext"><label for="setgmessagetime">Message time</label></div>
+            <input type="time" name="messagetime6" id="setgmessagetime6" class="input"
+              onchange=gtime6(this.value)><br><br><br>
+          </div>
+          <!-- white message time input 6-->
+          <div class="mtime" id="whitetime6">
+            <div class="datatext"><label for="setwmessagetime">Message time</label></div>
+            <input type="time" name="messagetime6" id="setwmessagetime6" class="input"
+              onchange=gtime6(this.value)><br><br><br>
+          </div>
+
+          <!-- tick option  6-->
+          <div class="tickdiv" id="radiodiv6">
+            <h3 onclick="radiobutton" id="test6">Ticks: </h3>
+            <input type="radio" name="tick6" class="radio" id="sradio6" value="single6">
+            <label for="sradio6" class="radiodata">Single</label>
+            <input type="radio" name="tick6" class="radio" id="dradio6" value="double6">
+            <label for="dradio6" class="radiodata">Double</label>
+            <input type="radio" name="tick6" class="radio" id="bradio6" value="blue6">
+            <label for="bradio6" class="radiodata">Blue</label>
+          </div>
+          <!-- add green message button  6-->
+          <div class=" flex_center add_message_button" id="add_green_message_button6">
+            <div onclick=calculateHeight6()+add_green_message6()+walpaper() class="button">Add Message</div>
+          </div>
+          <!-- add white message button  -->
+          <!-- <div class=" flex_center add_message_button" id="add_white_message_button">
+            <div onclick=add_white_message() class="button">Add Message</div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+    <!-- input message time  number 7 -->
+    <!-- input message  -->
+    <div id="message7">
+      <div class="input_message">
+        <div>
+          <!-- Message Date -->
+          <div class="datatext" style="margin-top: 50px;"><label for="setdate7">Add Date From This Message</label>
+          </div>
+          <div style="display: flex;flex-direction: column;align-items: center;">
+            <input type="text" name="name7" class="input" value="June 20, 2022" id="setdate7" />
+            <button class="add_date btn btn-color" onclick=adddate7()>Add Date</button><abbr class=" abrr"
+              title="Add Date From this messaage. -- NOTE:_ ( add date first then add message )"> ?</abbr>
+          </div>
+        </div>
+        <div class="messagepadding">
+          <div class="heading">Enter Message</div>
+          <!-- white green switch checkk box -->
+          <label class="label">
+            <input type="checkbox" class="chkbox" id="gwchkbox7" onclick=check_box_function7()>
+            <span class="chkspan">
+              <li class="face">
+                <div class="eye">&nbsp;</div>
+                <div class="eye2"> &nbsp;</div>
+                <i class="mouth">&nbsp;</i>
+              </li>
+            </span>
+          </label>
+          <!-- check box button end  -->
+          <div>
+
+            <div class="datatext" id="greentext7"><label for="setgmessage7"> Green message</label></div>
+            <div class="datatext" id="whitetext7"><label for="setgmessage7">White message</label></div>
+            <textarea type=" text" value="this is message 7" name="greenmessage" rows="6" id="setgmessage7"
+              placeholder="Enter Message..."></textarea><br><br>
+            <textarea type="text" name="whitemessage" rows="5" id="setwmessage7"
+              placeholder="White Bubble Message"></textarea>
+            <br><br>
+          </div>
+
+
+          <!-- Green message time input -->
+          <div class="mtime" id="greentime7">
+            <div class="datatext"><label for="setgmessagetime">Message time</label></div>
+            <input type="time" name="messagetime7" id="setgmessagetime7" class="input"
+              onchange=gtime7(this.value)><br><br><br>
+          </div>
+          <!-- white message time input 7-->
+          <div class="mtime" id="whitetime7">
+            <div class="datatext"><label for="setwmessagetime">Message time</label></div>
+            <input type="time" name="messagetime7" id="setwmessagetime7" class="input"
+              onchange=gtime7(this.value)><br><br><br>
+          </div>
+
+          <!-- tick option  7-->
+          <div class="tickdiv" id="radiodiv7">
+            <h3 onclick="radiobutton" id="test7">Ticks: </h3>
+            <input type="radio" name="tick7" class="radio" id="sradio7" value="single7">
+            <label for="sradio7" class="radiodata">Single</label>
+            <input type="radio" name="tick7" class="radio" id="dradio7" value="double7">
+            <label for="dradio7" class="radiodata">Double</label>
+            <input type="radio" name="tick7" class="radio" id="bradio7" value="blue7">
+            <label for="bradio7" class="radiodata">Blue</label>
+          </div>
+          <!-- add green message button  7-->
+          <div class=" flex_center add_message_button" id="add_green_message_button7">
+            <div onclick=calculateHeight7()+add_green_message7()+walpaper() class="button">Add Message</div>
+          </div>
+          <!-- add white message button  -->
+          <!-- <div class=" flex_center add_message_button" id="add_white_message_button">
+          <div onclick=add_white_message() class="button">Add Message</div>
+        </div> -->
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+    <!-- input message time  number 8 -->
+    <!-- input message  -->
+    <div id="message8">
+      <div class="input_message">
+        <div>
+          <!-- Message Date -->
+          <div class="datatext" style="margin-top: 50px;"><label for="setdate8">Add Date From This Message</label>
+          </div>
+          <div style="display: flex;flex-direction: column;align-items: center;">
+            <input type="text" name="name8" class="input" value="June 20, 2022" id="setdate8" />
+            <button class="add_date btn btn-color" onclick=adddate8()>Add Date</button><abbr class=" abrr"
+              title="Add Date From this messaage. -- NOTE:_ ( add date first then add message )"> ?</abbr>
+          </div>
+        </div>
+        <div class="messagepadding">
+          <div class="heading">Enter Message</div>
+          <!-- white green switch checkk box -->
+          <label class="label">
+            <input type="checkbox" class="chkbox" id="gwchkbox8" onclick=check_box_function8()>
+            <span class="chkspan">
+              <li class="face">
+                <div class="eye">&nbsp;</div>
+                <div class="eye2"> &nbsp;</div>
+                <i class="mouth">&nbsp;</i>
+              </li>
+            </span>
+          </label>
+          <!-- check box button end  -->
+          <div>
+
+            <div class="datatext" id="greentext8"><label for="setgmessage8"> Green message</label></div>
+            <div class="datatext" id="whitetext8"><label for="setgmessage8">White message</label></div>
+            <textarea type=" text" value="this is message 8" name="greenmessage" rows="6" id="setgmessage8"
+              placeholder="Enter Message..."></textarea><br><br>
+            <textarea type="text" name="whitemessage" rows="5" id="setwmessage8"
+              placeholder="White Bubble Message"></textarea>
+            <br><br>
+          </div>
+
+
+          <!-- Green message time input -->
+          <div class="mtime" id="greentime8">
+            <div class="datatext"><label for="setgmessagetime">Message time</label></div>
+            <input type="time" name="messagetime8" id="setgmessagetime8" class="input"
+              onchange=gtime8(this.value)><br><br><br>
+          </div>
+          <!-- white message time input 8-->
+          <div class="mtime" id="whitetime8">
+            <div class="datatext"><label for="setwmessagetime">Message time</label></div>
+            <input type="time" name="messagetime8" id="setwmessagetime8" class="input"
+              onchange=gtime8(this.value)><br><br><br>
+          </div>
+
+          <!-- tick option  8-->
+          <div class="tickdiv" id="radiodiv8">
+            <h3 onclick="radiobutton" id="test8">Ticks: </h3>
+            <input type="radio" name="tick8" class="radio" id="sradio8" value="single8">
+            <label for="sradio8" class="radiodata">Single</label>
+            <input type="radio" name="tick8" class="radio" id="dradio8" value="double8">
+            <label for="dradio8" class="radiodata">Double</label>
+            <input type="radio" name="tick8" class="radio" id="bradio8" value="blue8">
+            <label for="bradio8" class="radiodata">Blue</label>
+          </div>
+          <!-- add green message button  8-->
+          <div class=" flex_center add_message_button" id="add_green_message_button8">
+            <div onclick=calculateHeight8()+add_green_message8()+walpaper() class="button">Add Message</div>
+          </div>
+          <!-- add white message button  -->
+          <!-- <div class=" flex_center add_message_button" id="add_white_message_button">
+          <div onclick=add_white_message() class="button">Add Message</div>
+        </div> -->
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <!-- input message time  number 9 -->
+    <!-- input message  -->
+    <div id="message9">
+      <div class="input_message">
+        <div>
+          <!-- Message Date -->
+          <div class="datatext" style="margin-top: 50px;"><label for="setdate9">Add Date From This Message</label>
+          </div>
+          <div style="display: flex;flex-direction: column;align-items: center;">
+            <input type="text" name="name9" class="input" value="June 20, 2022" id="setdate9" />
+            <button class="add_date btn btn-color" onclick=adddate9()>Add Date</button><abbr class=" abrr"
+              title="Add Date From this messaage. -- NOTE:_ add date first then add message "> ?</abbr>
+          </div>
+        </div>
+        <div class="messagepadding">
+          <div class="heading">Enter Message</div>
+          <!-- white green switch checkk box -->
+          <label class="label">
+            <input type="checkbox" class="chkbox" id="gwchkbox9" onclick=check_box_function9()>
+            <span class="chkspan">
+              <li class="face">
+                <div class="eye">&nbsp;</div>
+                <div class="eye2"> &nbsp;</div>
+                <i class="mouth">&nbsp;</i>
+              </li>
+            </span>
+          </label>
+          <!-- check box button end  -->
+          <div>
+
+            <div class="datatext" id="greentext9"><label for="setgmessage9"> Green message</label></div>
+            <div class="datatext" id="whitetext9"><label for="setgmessage9">White message</label></div>
+            <textarea type=" text" value="this is message 9" name="greenmessage" rows="6" id="setgmessage9"
+              placeholder="Enter Message..."></textarea><br><br>
+            <textarea type="text" name="whitemessage" rows="5" id="setwmessage9"
+              placeholder="White Bubble Message"></textarea>
+            <br><br>
+          </div>
+
+
+          <!-- Green message time input -->
+          <div class="mtime" id="greentime9">
+            <div class="datatext"><label for="setgmessagetime">Message time</label></div>
+            <input type="time" name="messagetime9" id="setgmessagetime9" class="input"
+              onchange=gtime9(this.value)><br><br><br>
+          </div>
+          <!-- white message time input 9-->
+          <div class="mtime" id="whitetime9">
+            <div class="datatext"><label for="setwmessagetime">Message time</label></div>
+            <input type="time" name="messagetime9" id="setwmessagetime9" class="input"
+              onchange=gtime9(this.value)><br><br><br>
+          </div>
+
+          <!-- tick option  9-->
+          <div class="tickdiv" id="radiodiv9">
+            <h3 onclick="radiobutton" id="test9">Ticks: </h3>
+            <input type="radio" name="tick9" class="radio" id="sradio9" value="single9">
+            <label for="sradio9" class="radiodata">Single</label>
+            <input type="radio" name="tick9" class="radio" id="dradio9" value="double9">
+            <label for="dradio9" class="radiodata">Double</label>
+            <input type="radio" name="tick9" class="radio" id="bradio9" value="blue9">
+            <label for="bradio9" class="radiodata">Blue</label>
+          </div>
+          <!-- add green message button  9-->
+          <div class=" flex_center add_message_button" id="add_green_message_button9">
+            <div onclick=calculateHeight9()+add_green_message9()+walpaper() class="button">Add Message</div>
+          </div>
+          <!-- add white message button  -->
+          <!-- <div class=" flex_center add_message_button" id="add_white_message_button">
+          <div onclick=add_white_message() class="button">Add Message</div>
+        </div> -->
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+    <!-- input message time  number 10 -->
+    <!-- input message  -->
+    <div id="message10">
+      <div class="input_message">
+        <div>
+          <!-- Message Date -->
+          <div class="datatext" style="margin-top: 50px;"><label for="setdate10">Add Date From This
+              Message</label>
+          </div>
+          <div style="display: flex;flex-direction: column;align-items: center;">
+            <input type="text" name="name10" class="input" value="June 20, 2022" id="setdate10" />
+            <button class="add_date btn btn-color" onclick=adddate10()>Add Date</button><abbr class=" abrr"
+              title="Add Date From this messaage. -- NOTE:_ ( add date first then add message )"> ?</abbr>
+          </div>
+        </div>
+        <div class="messagepadding">
+          <div class="heading">Enter Message</div>
+          <!-- white green switch checkk box -->
+          <label class="label">
+            <input type="checkbox" class="chkbox" id="gwchkbox10" onclick=check_box_function10()>
+            <span class="chkspan">
+              <li class="face">
+                <div class="eye">&nbsp;</div>
+                <div class="eye2"> &nbsp;</div>
+                <i class="mouth">&nbsp;</i>
+              </li>
+            </span>
+          </label>
+          <!-- check box button end  -->
+          <div>
+
+            <div class="datatext" id="greentext10"><label for="setgmessage10"> Green message</label></div>
+            <div class="datatext" id="whitetext10"><label for="setgmessage10">White message</label></div>
+            <textarea type=" text" value="this is message 10" name="greenmessage" rows="6" id="setgmessage10"
+              placeholder="Enter Message..."></textarea><br><br>
+            <textarea type="text" name="whitemessage" rows="5" id="setwmessage10"
+              placeholder="White Bubble Message"></textarea>
+            <br><br>
+          </div>
+
+
+          <!-- Green message time input -->
+          <div class="mtime" id="greentime10">
+            <div class="datatext"><label for="setgmessagetime">Message time</label></div>
+            <input type="time" name="messagetime10" id="setgmessagetime10" class="input"
+              onchange=gtime10(this.value)><br><br><br>
+          </div>
+          <!-- white message time input 10-->
+          <div class="mtime" id="whitetime10">
+            <div class="datatext"><label for="setwmessagetime">Message time</label></div>
+            <input type="time" name="messagetime10" id="setwmessagetime10" class="input"
+              onchange=gtime10(this.value)><br><br><br>
+          </div>
+
+          <!-- tick option  10-->
+          <div class="tickdiv" id="radiodiv10">
+            <h3 onclick="radiobutton" id="test10">Ticks: </h3>
+            <input type="radio" name="tick10" class="radio" id="sradio10" value="single10">
+            <label for="sradio10" class="radiodata">Single</label>
+            <input type="radio" name="tick10" class="radio" id="dradio10" value="double10">
+            <label for="dradio10" class="radiodata">Double</label>
+            <input type="radio" name="tick10" class="radio" id="bradio10" value="blue10">
+            <label for="bradio10" class="radiodata">Blue</label>
+          </div>
+          <!-- add green message button  10-->
+          <div class=" flex_center add_message_button" id="add_green_message_button10">
+            <div onclick=calculateHeight10()+add_green_message10()+walpaper() class="button">Add Message</div>
+          </div>
+          <!-- add white message button  -->
+          <!-- <div class=" flex_center add_message_button" id="add_white_message_button">
+          <div onclick=add_white_message() class="button">Add Message</div>
+        </div> -->
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+    <!-- input message time  number 11 -->
+    <!-- input message  -->
+    <div id="message11">
+      <div class="input_message">
+        <div>
+          <!-- Message Date -->
+          <div class="datatext" style="margin-top: 50px;"><label for="setdate11">Add Date From This
+              Message</label>
+          </div>
+          <div style="display: flex;flex-direction: column;align-items: center;">
+            <input type="text" name="name11" class="input" value="June 20, 2022" id="setdate11" />
+            <button class="add_date btn btn-color" onclick=adddate11()>Add Date</button><abbr class=" abrr"
+              title="Add Date From this messaage. -- NOTE:_ ( add date first then add message )"> ?</abbr>
+          </div>
+        </div>
+        <div class="messagepadding">
+          <div class="heading">Enter Message</div>
+          <!-- white green switch checkk box -->
+          <label class="label">
+            <input type="checkbox" class="chkbox" id="gwchkbox11" onclick=check_box_function11()>
+            <span class="chkspan">
+              <li class="face">
+                <div class="eye">&nbsp;</div>
+                <div class="eye2"> &nbsp;</div>
+                <i class="mouth">&nbsp;</i>
+              </li>
+            </span>
+          </label>
+          <!-- check box button end  -->
+          <div>
+
+            <div class="datatext" id="greentext11"><label for="setgmessage11"> Green message</label></div>
+            <div class="datatext" id="whitetext11"><label for="setgmessage11">White message</label></div>
+            <textarea type=" text" value="this is message 11" name="greenmessage" rows="6" id="setgmessage11"
+              placeholder="Enter Message..."></textarea><br><br>
+            <textarea type="text" name="whitemessage" rows="5" id="setwmessage11"
+              placeholder="White Bubble Message"></textarea>
+            <br><br>
+          </div>
+
+
+          <!-- Green message time input -->
+          <div class="mtime" id="greentime11">
+            <div class="datatext"><label for="setgmessagetime">Message time</label></div>
+            <input type="time" name="messagetime11" id="setgmessagetime11" class="input"
+              onchange=gtime11(this.value)><br><br><br>
+          </div>
+          <!-- white message time input 11-->
+          <div class="mtime" id="whitetime11">
+            <div class="datatext"><label for="setwmessagetime">Message time</label></div>
+            <input type="time" name="messagetime11" id="setwmessagetime11" class="input"
+              onchange=gtime11(this.value)><br><br><br>
+          </div>
+
+          <!-- tick option  11-->
+          <div class="tickdiv" id="radiodiv11">
+            <h3 onclick="radiobutton" id="test11">Ticks: </h3>
+            <input type="radio" name="tick11" class="radio" id="sradio11" value="single11">
+            <label for="sradio11" class="radiodata">Single</label>
+            <input type="radio" name="tick11" class="radio" id="dradio11" value="double11">
+            <label for="dradio11" class="radiodata">Double</label>
+            <input type="radio" name="tick11" class="radio" id="bradio11" value="blue11">
+            <label for="bradio11" class="radiodata">Blue</label>
+          </div>
+          <!-- add green message button  11-->
+          <div class=" flex_center add_message_button" id="add_green_message_button11">
+            <div onclick=calculateHeight11()+add_green_message11()+walpaper() class="button">Add Message</div>
+          </div>
+          <!-- add white message button  -->
+          <!-- <div class=" flex_center add_message_button" id="add_white_message_button">
+          <div onclick=add_white_message() class="button">Add Message</div>
+        </div> -->
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <!-- input message time  number 12 -->
+    <!-- input message  -->
+    <div id="message12">
+      <div class="input_message">
+        <div>
+          <!-- Message Date -->
+          <div class="datatext" style="margin-top: 50px;"><label for="setdate12">Add Date From This
+              Message</label>
+          </div>
+          <div style="display: flex;flex-direction: column;align-items: center;">
+            <input type="text" name="name12" class="input" value="June 20, 2022" id="setdate12" />
+            <button class="add_date btn btn-color" onclick=adddate12()>Add Date</button><abbr class=" abrr"
+              title="Add Date From this messaage. -- NOTE:_ ( add date first then add message )"> ?</abbr>
+          </div>
+        </div>
+        <div class="messagepadding">
+          <div class="heading">Enter Message</div>
+          <!-- white green switch checkk box -->
+          <label class="label">
+            <input type="checkbox" class="chkbox" id="gwchkbox12" onclick=check_box_function12()>
+            <span class="chkspan">
+              <li class="face">
+                <div class="eye">&nbsp;</div>
+                <div class="eye2"> &nbsp;</div>
+                <i class="mouth">&nbsp;</i>
+              </li>
+            </span>
+          </label>
+          <!-- check box button end  -->
+          <div>
+
+            <div class="datatext" id="greentext12"><label for="setgmessage12"> Green message</label></div>
+            <div class="datatext" id="whitetext12"><label for="setgmessage12">White message</label></div>
+            <textarea type=" text" value="this is message 12" name="greenmessage" rows="6" id="setgmessage12"
+              placeholder="Enter Message..."></textarea><br><br>
+            <textarea type="text" name="whitemessage" rows="5" id="setwmessage12"
+              placeholder="White Bubble Message"></textarea>
+            <br><br>
+          </div>
+
+
+          <!-- Green message time input -->
+          <div class="mtime" id="greentime12">
+            <div class="datatext"><label for="setgmessagetime">Message time</label></div>
+            <input type="time" name="messagetime12" id="setgmessagetime12" class="input"
+              onchange=gtime12(this.value)><br><br><br>
+          </div>
+          <!-- white message time input 12-->
+          <div class="mtime" id="whitetime12">
+            <div class="datatext"><label for="setwmessagetime">Message time</label></div>
+            <input type="time" name="messagetime12" id="setwmessagetime12" class="input"
+              onchange=gtime12(this.value)><br><br><br>
+          </div>
+
+          <!-- tick option  12-->
+          <div class="tickdiv" id="radiodiv12">
+            <h3 onclick="radiobutton" id="test12">Ticks: </h3>
+            <input type="radio" name="tick12" class="radio" id="sradio12" value="single12">
+            <label for="sradio12" class="radiodata">Single</label>
+            <input type="radio" name="tick12" class="radio" id="dradio12" value="double12">
+            <label for="dradio12" class="radiodata">Double</label>
+            <input type="radio" name="tick12" class="radio" id="bradio12" value="blue12">
+            <label for="bradio12" class="radiodata">Blue</label>
+          </div>
+          <!-- add green message button  12-->
+          <div class=" flex_center add_message_button" id="add_green_message_button12">
+            <div onclick=calculateHeight12()+add_green_message12()+walpaper() class="button">Add Message</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- input message time  number 13 -->
+    <!-- input message  -->
+    <div id="message13">
+      <div class="input_message">
+        <div>
+          <!-- Message Date -->
+          <div class="datatext" style="margin-top: 50px;"><label for="setdate13">Add Date From This
+              Message</label>
+          </div>
+          <div style="display: flex;flex-direction: column;align-items: center;">
+            <input type="text" name="name13" class="input" value="June 20, 2022" id="setdate13" />
+            <button class="add_date btn btn-color" onclick=adddate13()>Add Date</button><abbr class=" abrr"
+              title="Add Date From this messaage. -- NOTE:_ ( add date first then add message )"> ?</abbr>
+          </div>
+        </div>
+        <div class="messagepadding">
+          <div class="heading">Enter Message</div>
+          <!-- white green switch checkk box -->
+          <label class="label">
+            <input type="checkbox" class="chkbox" id="gwchkbox13" onclick=check_box_function13()>
+            <span class="chkspan">
+              <li class="face">
+                <div class="eye">&nbsp;</div>
+                <div class="eye2"> &nbsp;</div>
+                <i class="mouth">&nbsp;</i>
+              </li>
+            </span>
+          </label>
+          <!-- check box button end  -->
+          <div>
+
+            <div class="datatext" id="greentext13"><label for="setgmessage13"> Green message</label></div>
+            <div class="datatext" id="whitetext13"><label for="setgmessage13">White message</label></div>
+            <textarea type=" text" value="this is message 13" name="greenmessage" rows="6" id="setgmessage13"
+              placeholder="Enter Message..."></textarea><br><br>
+            <textarea type="text" name="whitemessage" rows="5" id="setwmessage13"
+              placeholder="White Bubble Message"></textarea>
+            <br><br>
+          </div>
+
+
+          <!-- Green message time input -->
+          <div class="mtime" id="greentime13">
+            <div class="datatext"><label for="setgmessagetime">Message time</label></div>
+            <input type="time" name="messagetime13" id="setgmessagetime13" class="input"
+              onchange=gtime13(this.value)><br><br><br>
+          </div>
+          <!-- white message time input 13-->
+          <div class="mtime" id="whitetime13">
+            <div class="datatext"><label for="setwmessagetime">Message time</label></div>
+            <input type="time" name="messagetime13" id="setwmessagetime13" class="input"
+              onchange=gtime13(this.value)><br><br><br>
+          </div>
+
+          <!-- tick option  13-->
+          <div class="tickdiv" id="radiodiv13">
+            <h3 onclick="radiobutton" id="test13">Ticks: </h3>
+            <input type="radio" name="tick13" class="radio" id="sradio13" value="single13">
+            <label for="sradio13" class="radiodata">Single</label>
+            <input type="radio" name="tick13" class="radio" id="dradio13" value="double13">
+            <label for="dradio13" class="radiodata">Double</label>
+            <input type="radio" name="tick13" class="radio" id="bradio13" value="blue13">
+            <label for="bradio13" class="radiodata">Blue</label>
+          </div>
+          <!-- add green message button  13-->
+          <div class=" flex_center add_message_button" id="add_green_message_button13">
+            <div onclick=calculateHeight13()+add_green_message13()+walpaper() class="button">Add Message</div>
+          </div>
+          <!-- add white message button  -->
+          <!-- <div class=" flex_center add_message_button" id="add_white_message_button">
+          <div onclick=add_white_message() class="button">Add Message</div>
+        </div> -->
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+    <!-- input message time  number 14 -->
+    <!-- input message  -->
+    <div id="message14">
+      <div class="input_message">
+        <div>
+          <!-- Message Date -->
+          <div class="datatext" style="margin-top: 50px;"><label for="setdate14">Add Message Date</label></div>
+          <div style="display: flex;flex-direction: column;align-items: center;">
+            <input type="text" name="name14" class="input" value="June 20, 2022" id="setdate14" />
+            <button class="add_date btn btn-color" onclick=adddate14()>Add Date</button><abbr class=" abrr"
+              title="Add Date From this messaage. -- NOTE:_ ( add date first then add message )"> ?</abbr>
+          </div>
+        </div>
+        <div class="messagepadding">
+          <div class="heading">Enter Message</div>
+          <!-- white green switch checkk box -->
+          <label class="label">
+            <input type="checkbox" class="chkbox" id="gwchkbox14" onclick=check_box_function14()>
+            <span class="chkspan">
+              <li class="face">
+                <div class="eye">&nbsp;</div>
+                <div class="eye2"> &nbsp;</div>
+                <i class="mouth">&nbsp;</i>
+              </li>
+            </span>
+          </label>
+          <!-- check box button end  -->
+          <div>
+
+            <div class="datatext" id="greentext14"><label for="setgmessage14"> Green message</label></div>
+            <div class="datatext" id="whitetext14"><label for="setgmessage14">White message</label></div>
+            <textarea type=" text" value="this is message 14" name="greenmessage" rows="6" id="setgmessage14"
+              placeholder="Green Bubble Message"></textarea><br><br>
+            <textarea type="text" name="whitemessage" rows="5" id="setwmessage14"
+              placeholder="White Bubble Message"></textarea>
+            <br><br>
+          </div>
+
+
+          <!-- Green message time input -->
+          <div class="mtime" id="greentime14">
+            <div class="datatext"><label for="setgmessagetime">Message time</label></div>
+            <input type="time" name="messagetime14" id="setgmessagetime14" class="input"
+              onchange=gtime14(this.value)><br><br><br>
+          </div>
+          <!-- white message time input 14-->
+          <div class="mtime" id="whitetime14">
+            <div class="datatext"><label for="setwmessagetime">Message time</label></div>
+            <input type="time" name="messagetime14" id="setwmessagetime14" class="input"
+              onchange=gtime14(this.value)><br><br><br>
+          </div>
+
+          <!-- tick option  14-->
+          <div class="tickdiv" id="radiodiv14">
+            <h3 onclick="radiobutton" id="test14">Ticks: </h3>
+            <input type="radio" name="tick14" class="radio" id="sradio14" value="single14">
+            <label for="sradio14" class="radiodata">Single</label>
+            <input type="radio" name="tick14" class="radio" id="dradio14" value="double14">
+            <label for="dradio14" class="radiodata">Double</label>
+            <input type="radio" name="tick14" class="radio" id="bradio14" value="blue14">
+            <label for="bradio14" class="radiodata">Blue</label>
+          </div>
+          <!-- add green message button  14-->
+          <div class=" flex_center add_message_button" id="add_green_message_button14">
+            <div onclick=calculateHeight14()+add_green_message14()+walpaper() class="button">Add Message</div>
+          </div>
+          <!-- add white message button  -->
+          <!-- <div class=" flex_center add_message_button" id="add_white_message_button">
+          <div onclick=add_white_message() class="button">Add Message</div>
+        </div> -->
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+
+  <!-- test file upload -->
+  <!-- <div id="fileupload" style="width: 300px;height: 300px; border: 2px solid red;"></div> -->
+
+
+  <!-- output | output | output | output | output | output | output | output | output | -->
+  <div class="screenshot flex_center">
+    <div class="main" id="screenshot">
+      <!-- top section -->
+      <div class="namesection" id="namesection">
+        <!-- arrow -->
+        <div class="backarrow">
+          <div class="fa-solid fa-arrow-left"></div>
+          <!-- <i class="fa-solid fa-air-conditioner"></i> -->
+        </div>
+        <!-- profile picture -->
+        <img src="images/profile.jpg" alt="profilepic" class="profilepic" width="33px" height="35px"
+          id="uploadprofile" />
+        <!-- name -->
+        <div class="namediv">
+          <div class="name" id="name">Dear John</div>
+          <div class="lastseen" id="online">
+            <!--last seen today at--> 11:48 AM
+          </div>
+        </div>
+        <!-- video call icon -->
+        <div style="width: 106px;">
+          <img src="images/video.png" class="videocall" alt="video icon" width="40px" height="40px" />
+          <!-- audio call icon -->
+          <img src="images/audio.png" class="audiocall" alt="audio icon" />
+        </div>
+        <!-- dots -->
+        <div class="dots">&#10247;</div>
+      </div>
+      <!-- main chat section-->
+      <div class="chatsection">
+        <img src="images/walpaper.jpg" alt="walpaper" class="walpaper" id="walpaper" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- the message number 1 -->
+        <div class="themessage1">
+
+          <div class="datee_div" id="datediv">
+            <div class="datebox" id="date">4 May 2022</div>
+          </div>
+          <!-- messages section | messages section | messages section | -->
+          <!--green bubele -->
+          <div class="gmessage_box" id="greenmessagediv">
+            <div class="bubblediv" id="gbubblediv1">
+              <div id="gmessage">1st Message</div>
+              <!-- gnoke -->
+              <div class="gnoke" id="gnoke1"></div>
+              <div class="timediv gmessage_time" id="gmessagetime1">
+                <div id="gmessagetime">1:30 AM</div>
+                <img src="images/singletick.png" id="singletick" class="message_tick"></img>
+                <img src="images/doubletick.png" id="doubletick" class="message_tick"></img>
+                <img src="images/seentick.png" id="bluetick" class="message_tick"></img>
+              </div>
+            </div>
+          </div>
+          <!--white bubble -->
+          <div class="wmessage_box" id="whitemessagediv">
+            <div class="bubblediv" id="wbubblediv1">
+              <div id="wmessage">1st Message</div>
+              <!-- wnoke  -->
+              <div class="wnoke" id="wnoke1"> &nbsp;</div>
+              <div class="timediv">
+                <sub class="wmessage_time" id="wmessagetime">1:30 AM</sub>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <!-- the message number 2 -->
+        <div class="themessage2">
+
+          <div class="datee_div" id="datediv2">
+            <div class="datebox" id="date2">4 May 2022</div>
+          </div>
+          <!-- messages section | messages section | messages section | -->
+          <!--green bubele -->
+          <div class="gmessage_box" id="greenmessagediv2">
+            <div class="bubblediv" id="gbubblediv2">
+              <div id="gmessage2">2nd Message</div>
+              <!-- gnoke -->
+              <div class="gnoke" id="gnoke2"></div>
+              <div class="timediv gmessage_time" id="gmessagetime2">
+                <div id="gmessagetime2">1:30 AM</div>
+                <img src="images/singletick.png" id="singletick2" class="message_tick"></img>
+                <img src="images/doubletick.png" id="doubletick2" class="message_tick"></img>
+                <img src="images/seentick.png" id="bluetick2" class="message_tick"></img>
+              </div>
+            </div>
+          </div>
+          <!--white bubble -->
+          <div class="wmessage_box" id="whitemessagediv2">
+            <div class="bubblediv" id="wbubblediv2">
+              <div id="wmessage2">2nd Message</div>
+              <!-- wnoke  -->
+              <div class="wnoke"> &nbsp;</div>
+              <div class="timediv">
+                <sub class="wmessage_time" id="wmessagetime2">1:30 AM</sub>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+        <!-- the message number 3 -->
+        <div class="themessage3">
+
+          <div class="datee_div" id="datediv3">
+            <div class="datebox" id="date3">4 May 3031</div>
+          </div>
+          <!-- messages section | messages section | messages section | -->
+          <!--green bubele -->
+          <div class="gmessage_box" id="greenmessagediv3">
+            <div class="bubblediv" id="gbubblediv3">
+              <div id="gmessage3">3rd Message</div>
+              <!-- gnoke -->
+              <div class="gnoke" id="gnoke3"></div>
+              <div class="timediv gmessage_time" id="gmessagetime3">
+                <div id="gmessagetime3">1:30 AM</div>
+                <img src="images/singletick.png" id="singletick3" class="message_tick"></img>
+                <img src="images/doubletick.png" id="doubletick3" class="message_tick"></img>
+                <img src="images/seentick.png" id="bluetick3" class="message_tick"></img>
+              </div>
+            </div>
+          </div>
+          <!--white bubble -->
+          <div class="wmessage_box" id="whitemessagediv3">
+            <div class="bubblediv" id="wbubblediv3">
+              <div id="wmessage3">3rd Message</div>
+              <!-- wnoke  -->
+              <div class="wnoke"> &nbsp;</div>
+              <div class="timediv">
+                <sub class="wmessage_time" id="wmessagetime3">1:30 AM</sub>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+        <!-- the message number 4 -->
+        <div class="themessage4">
+
+          <div class="datee_div" id="datediv4">
+            <div class="datebox" id="date4">4 May 2022</div>
+          </div>
+          <!-- messages section | messages section | messages section | -->
+          <!--green bubele -->
+          <div class="gmessage_box" id="greenmessagediv4">
+            <div class="bubblediv" id="gbubblediv4">
+              <div id="gmessage4">4th Message</div>
+              <!-- gnoke -->
+              <div class="gnoke" id="gnoke4"></div>
+              <div class="timediv gmessage_time" id="gmessagetime4">
+                <div id="gmessagetime4">1:40 AM</div>
+                <img src="images/singletick.png" id="singletick4" class="message_tick"></img>
+                <img src="images/doubletick.png" id="doubletick4" class="message_tick"></img>
+                <img src="images/seentick.png" id="bluetick4" class="message_tick"></img>
+              </div>
+            </div>
+          </div>
+          <!--white bubble -->
+          <div class="wmessage_box" id="whitemessagediv4">
+            <div class="bubblediv" id="wbubblediv4">
+              <div id="wmessage4">4th Message</div>
+              <!-- wnoke  -->
+              <div class="wnoke"> &nbsp;</div>
+              <div class="timediv">
+                <sub class="wmessage_time" id="wmessagetime4">1:40 AM</sub>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+        <!-- the message number 5 -->
+        <div class="themessage5">
+
+          <div class="datee_div" id="datediv5">
+            <div class="datebox" id="date5">5 May 2022</div>
+          </div>
+          <!-- messages section | messages section | messages section | -->
+          <!--green bubele -->
+          <div class="gmessage_box" id="greenmessagediv5">
+            <div class="bubblediv" id="gbubblediv5">
+              <div id="gmessage5">5th Message</div>
+              <!-- gnoke -->
+              <div class="gnoke" id="gnoke5"></div>
+              <div class="timediv gmessage_time" id="gmessagetime5">
+                <div id="gmessagetime5">1:50 AM</div>
+                <img src="images/singletick.png" id="singletick5" class="message_tick"></img>
+                <img src="images/doubletick.png" id="doubletick5" class="message_tick"></img>
+                <img src="images/seentick.png" id="bluetick5" class="message_tick"></img>
+              </div>
+            </div>
+          </div>
+          <!--white bubble -->
+          <div class="wmessage_box" id="whitemessagediv5">
+            <div class="bubblediv" id="wbubblediv5">
+              <div id="wmessage5">5th Message</div>
+              <!-- wnoke  -->
+              <div class="wnoke"> &nbsp;</div>
+              <div class="timediv">
+                <sub class="wmessage_time" id="wmessagetime5">1:50 AM</sub>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+        <!-- the message number 6 -->
+        <div class="themessage6">
+
+          <div class="datee_div" id="datediv6">
+            <div class="datebox" id="date6">June 20, 2022</div>
+          </div>
+          <!-- messages section | messages section | messages section | -->
+          <!--green bubele -->
+          <div class="gmessage_box" id="greenmessagediv6">
+            <div class="bubblediv" id="gbubblediv6">
+              <div id="gmessage6">6th Message</div>
+              <!-- gnoke -->
+              <div class="gnoke" id="gnoke6"></div>
+              <div class="timediv gmessage_time" id="gmessagetime6">
+                <div id="gmessagetime6">2:00 AM</div>
+                <img src="images/singletick.png" id="singletick6" class="message_tick"></img>
+                <img src="images/doubletick.png" id="doubletick6" class="message_tick"></img>
+                <img src="images/seentick.png" id="bluetick6" class="message_tick"></img>
+              </div>
+            </div>
+          </div>
+          <!--white bubble -->
+          <div class="wmessage_box" id="whitemessagediv6">
+            <div class="bubblediv" id="wbubblediv6">
+              <div id="wmessage6">6th Message</div>
+              <!-- wnoke  -->
+              <div class="wnoke"> &nbsp;</div>
+              <div class="timediv">
+                <sub class="wmessage_time" id="wmessagetime6">1:50 AM</sub>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+        <!-- the message number 7 -->
+        <div class="themessage7">
+
+          <div class="datee_div" id="datediv7">
+            <div class="datebox" id="date7">June 20, 2022</div>
+          </div>
+          <!-- messages section | messages section | messages section | -->
+          <!--green bubele -->
+          <div class="gmessage_box" id="greenmessagediv7">
+            <div class="bubblediv" id="gbubblediv7">
+              <div id="gmessage7">7th Message</div>
+              <!-- gnoke -->
+              <div class="gnoke" id="gnoke7"></div>
+              <div class="timediv gmessage_time" id="gmessagetime7">
+                <div id="gmessagetime7">2:00 AM</div>
+                <img src="images/singletick.png" id="singletick7" class="message_tick"></img>
+                <img src="images/doubletick.png" id="doubletick7" class="message_tick"></img>
+                <img src="images/seentick.png" id="bluetick7" class="message_tick"></img>
+              </div>
+            </div>
+          </div>
+          <!--white bubble -->
+          <div class="wmessage_box" id="whitemessagediv7">
+            <div class="bubblediv" id="wbubblediv7">
+              <div id="wmessage7">7th Message</div>
+              <!-- wnoke  -->
+              <div class="wnoke"> &nbsp;</div>
+              <div class="timediv">
+                <sub class="wmessage_time" id="wmessagetime7">1:50 AM</sub>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+        <!-- the message number 8 -->
+        <div class="themessage8">
+
+          <div class="datee_div" id="datediv8">
+            <div class="datebox" id="date8">June 20, 2022</div>
+          </div>
+          <!-- messages section | messages section | messages section | -->
+          <!--green bubele -->
+          <div class="gmessage_box" id="greenmessagediv8">
+            <div class="bubblediv" id="gbubblediv8">
+              <div id="gmessage8">8th Message</div>
+              <!-- gnoke -->
+              <div class="gnoke" id="gnoke8"></div>
+              <div class="timediv gmessage_time" id="gmessagetime8">
+                <div id="gmessagetime8">2:00 AM</div>
+                <img src="images/singletick.png" id="singletick8" class="message_tick"></img>
+                <img src="images/doubletick.png" id="doubletick8" class="message_tick"></img>
+                <img src="images/seentick.png" id="bluetick8" class="message_tick"></img>
+              </div>
+            </div>
+          </div>
+          <!--white bubble -->
+          <div class="wmessage_box" id="whitemessagediv8">
+            <div class="bubblediv" id="wbubblediv8">
+              <div id="wmessage8">8th Message</div>
+              <!-- wnoke  -->
+              <div class="wnoke"> &nbsp;</div>
+              <div class="timediv">
+                <sub class="wmessage_time" id="wmessagetime8">1:50 AM</sub>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- the message number 9 -->
+        <div class="themessage9">
+
+          <div class="datee_div" id="datediv9">
+            <div class="datebox" id="date9">June 20, 2022</div>
+          </div>
+          <!-- messages section | messages section | messages section | -->
+          <!--green bubele -->
+          <div class="gmessage_box" id="greenmessagediv9">
+            <div class="bubblediv" id="gbubblediv9">
+              <div id="gmessage9">9th Message</div>
+              <!-- gnoke -->
+              <div class="gnoke" id="gnoke9"></div>
+              <div class="timediv gmessage_time" id="gmessagetime9">
+                <div id="gmessagetime9">2:00 AM</div>
+                <img src="images/singletick.png" id="singletick9" class="message_tick"></img>
+                <img src="images/doubletick.png" id="doubletick9" class="message_tick"></img>
+                <img src="images/seentick.png" id="bluetick9" class="message_tick"></img>
+              </div>
+            </div>
+          </div>
+          <!--white bubble -->
+          <div class="wmessage_box" id="whitemessagediv9">
+            <div class="bubblediv" id="wbubblediv9">
+              <div id="wmessage9">9th Message</div>
+              <!-- wnoke  -->
+              <div class="wnoke"> &nbsp;</div>
+              <div class="timediv">
+                <sub class="wmessage_time" id="wmessagetime9">1:50 AM</sub>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+        <!-- the message number 10 -->
+        <div class="themessage10">
+
+          <div class="datee_div" id="datediv10">
+            <div class="datebox" id="date10">June 20, 2022</div>
+          </div>
+          <!-- messages section | messages section | messages section | -->
+          <!--green bubele -->
+          <div class="gmessage_box" id="greenmessagediv10">
+            <div class="bubblediv" id="gbubblediv10">
+              <div id="gmessage10">10th Message</div>
+              <!-- gnoke -->
+              <div class="gnoke" id="gnoke10"></div>
+              <div class="timediv gmessage_time" id="gmessagetime10">
+                <div id="gmessagetime10">2:00 AM</div>
+                <img src="images/singletick.png" id="singletick10" class="message_tick"></img>
+                <img src="images/doubletick.png" id="doubletick10" class="message_tick"></img>
+                <img src="images/seentick.png" id="bluetick10" class="message_tick"></img>
+              </div>
+            </div>
+          </div>
+          <!--white bubble -->
+          <div class="wmessage_box" id="whitemessagediv10">
+            <div class="bubblediv" id="wbubblediv10">
+              <div id="wmessage10">10th Message</div>
+              <!-- wnoke  -->
+              <div class="wnoke"> &nbsp;</div>
+              <div class="timediv">
+                <sub class="wmessage_time" id="wmessagetime10">1:50 AM</sub>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <!-- the message number 11 -->
+        <div class="themessage11">
+
+          <div class="datee_div" id="datediv11">
+            <div class="datebox" id="date11">June 20, 2022</div>
+          </div>
+          <!-- messages section | messages section | messages section | -->
+          <!--green bubele -->
+          <div class="gmessage_box" id="greenmessagediv11">
+            <div class="bubblediv" id="gbubblediv11">
+              <div id="gmessage11">11th Message</div>
+              <!-- gnoke -->
+              <div class="gnoke" id="gnoke11"></div>
+              <div class="timediv gmessage_time" id="gmessagetime11">
+                <div id="gmessagetime11">2:00 AM</div>
+                <img src="images/singletick.png" id="singletick11" class="message_tick"></img>
+                <img src="images/doubletick.png" id="doubletick11" class="message_tick"></img>
+                <img src="images/seentick.png" id="bluetick11" class="message_tick"></img>
+              </div>
+            </div>
+          </div>
+          <!--white bubble -->
+          <div class="wmessage_box" id="whitemessagediv11">
+            <div class="bubblediv" id="wbubblediv11">
+              <div id="wmessage11">11th Message</div>
+              <!-- wnoke  -->
+              <div class="wnoke"> &nbsp;</div>
+              <div class="timediv">
+                <sub class="wmessage_time" id="wmessagetime11">1:50 AM</sub>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+        <!-- the message number 12 -->
+        <div class="themessage12">
+
+          <div class="datee_div" id="datediv12">
+            <div class="datebox" id="date12">June 20, 2022</div>
+          </div>
+          <!-- messages section | messages section | messages section | -->
+          <!--green bubele -->
+          <div class="gmessage_box" id="greenmessagediv12">
+            <div class="bubblediv" id="gbubblediv12">
+              <div id="gmessage12">12th Message</div>
+              <!-- gnoke -->
+              <div class="gnoke" id="gnoke12"></div>
+              <div class="timediv gmessage_time" id="gmessagetime12">
+                <div id="gmessagetime12">2:00 AM</div>
+                <img src="images/singletick.png" id="singletick12" class="message_tick"></img>
+                <img src="images/doubletick.png" id="doubletick12" class="message_tick"></img>
+                <img src="images/seentick.png" id="bluetick12" class="message_tick"></img>
+              </div>
+            </div>
+          </div>
+          <!--white bubble -->
+          <div class="wmessage_box" id="whitemessagediv12">
+            <div class="bubblediv" id="wbubblediv12">
+              <div id="wmessage12">12th Message</div>
+              <!-- wnoke  -->
+              <div class="wnoke"> &nbsp;</div>
+              <div class="timediv">
+                <sub class="wmessage_time" id="wmessagetime12">1:50 AM</sub>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+        <!-- the message number 13 -->
+        <div class="themessage13">
+
+          <div class="datee_div" id="datediv13">
+            <div class="datebox" id="date13">June 20, 2022</div>
+          </div>
+          <!-- messages section | messages section | messages section | -->
+          <!--green bubele -->
+          <div class="gmessage_box" id="greenmessagediv13">
+            <div class="bubblediv" id="gbubblediv13">
+              <div id="gmessage13">13th Message</div>
+              <!-- gnoke -->
+              <div class="gnoke" id="gnoke13"></div>
+              <div class="timediv gmessage_time" id="gmessagetime13">
+                <div id="gmessagetime13">2:00 AM</div>
+                <img src="images/singletick.png" id="singletick13" class="message_tick"></img>
+                <img src="images/doubletick.png" id="doubletick13" class="message_tick"></img>
+                <img src="images/seentick.png" id="bluetick13" class="message_tick"></img>
+              </div>
+            </div>
+          </div>
+          <!--white bubble -->
+          <div class="wmessage_box" id="whitemessagediv13">
+            <div class="bubblediv" id="wbubblediv13">
+              <div id="wmessage13">13th Message</div>
+              <!-- wnoke  -->
+              <div class="wnoke"> &nbsp;</div>
+              <div class="timediv">
+                <sub class="wmessage_time" id="wmessagetime13">1:50 AM</sub>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+        <!-- the message number 14 -->
+        <div class="themessage14">
+
+          <div class="datee_div" id="datediv14">
+            <div class="datebox" id="date14">June 20, 2022</div>
+          </div>
+          <!-- messages section | messages section | messages section | -->
+          <!--green bubele -->
+          <div class="gmessage_box" id="greenmessagediv14">
+            <div class="bubblediv" id="gbubblediv14">
+              <div id="gmessage14">14th Message</div>
+              <!-- gnoke -->
+              <div class="gnoke" id="gnoke14"></div>
+              <div class="timediv gmessage_time" id="gmessagetime14">
+                <div id="gmessagetime14">2:00 AM</div>
+                <img src="images/singletick.png" id="singletick14" class="message_tick"></img>
+                <img src="images/doubletick.png" id="doubletick14" class="message_tick"></img>
+                <img src="images/seentick.png" id="bluetick14" class="message_tick"></img>
+              </div>
+            </div>
+          </div>
+          <!--white bubble -->
+          <div class="wmessage_box" id="whitemessagediv14">
+            <div class="bubblediv" id="wbubblediv14">
+              <div id="wmessage14">14th Message</div>
+              <!-- wnoke  -->
+              <div class="wnoke"> &nbsp;</div>
+              <div class="timediv">
+                <sub class="wmessage_time" id="wmessagetime14">1:50 AM</sub>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- message typing box -->
+        <div class="text_typing_box" id="textbox">
+          <div class="box4">
+            <img src="images/emoji.jpg" alt="emojie pic" class="emoji">
+            <span id="line1">|</span>
+            <div class="footermessage" id="fmessage">Message</div>
+            <span id="line2">|</span>
+            <img src="images/attachment.jpg" class="attachment" alt="attachment pic">
+            <img src="images/camera.png" class="camera" alt="camera pic">
+          </div>
+          <img src="images/mic.png" class="mice" alt="mic pic" id="mic">
+        </div>
+      </div>
+    </div>
+  </div><br><br>
+
+
+
+
+
+
+
+
+
+
+
+  <!-- saving screenshot button  -->
+  <div style="text-align: center;">
+    <button onclick="imgfun()" class="small_button">See ScreenShot</button>
+    <!-- <button onclick="savefun()" class="button">imgsave</button> -->
+    <button class="small_button" onclick="fsave()">Save as ScreenShot</button>
+  </div><br><br>
+  <!-- script tag | script tag | script tag| script tag | script tag | script tag | script tag -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.js"></script>
+
+  <!-- div to image -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+  <!-- script  -->
+  <script src="savedata.js"></script>
+  <script src="msgchange.js"></script>
+  <script src="messages/messages1.js"></script>
+  <script src="messages/message2.js"></script>
+  <script src="messages/message3.js"></script>
+  <script src="messages/message4.js"></script>
+  <script src="messages/message5.js"></script>
+  <script src="messages/message6.js"></script>
+  <script src="messages/message7.js"></script>
+  <script src="messages/message8.js"></script>
+  <script src="messages/message9.js"></script>
+  <script src="messages/message10.js"></script>
+  <script src="messages/message11.js"></script>
+  <script src="messages/message12.js"></script>
+  <script src="messages/message13.js"></script>
+  <script src="messages/message14.js"></script>
+
+</body>
+
+</html>
